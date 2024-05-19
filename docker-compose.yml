@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  tasks_service:
+    restart: on-failure
+    container_name: car_rent_service
+    build: car_rent_service/
+    ports:
+      - "8000:80"
+
+  bored_service:
+    restart: on-failure
+    container_name: car_api_service
+    build: car_api_service/
+    ports:
+      - "8001:80"
