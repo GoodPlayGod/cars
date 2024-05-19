@@ -31,5 +31,5 @@ async def test_car_rental_service_connection():
 
 @pytest.mark.asyncio
 async def test_car_api_service_connection():
-    response = await car_api_status()
-    assert 'activity' in response
+    r = await car_api_status()
+    assert r == {'message': 'Service alive'}

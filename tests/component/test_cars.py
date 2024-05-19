@@ -28,7 +28,7 @@ def test_add_car():
 
 
 def test_get_cars():
-    response = requests.get(get_cars_url)
+    response = requests.get(get_cars_url).json()
     assert new_car in response
 
 
